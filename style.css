@@ -1,9 +1,14 @@
+:root {
+  --pink:#EA4C89;
+  --white:#FFFFFF;
+  --black:#0D0C22;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Helvetica";
-  color: #fff;
 }
 
 html, body {
@@ -12,61 +17,215 @@ html, body {
 }
 
 main {
-  position: relative;
   height: 100%;
   width: 100%;
-  background-color: #141414;
+  background-color: var(--white);
 }
-main nav {
+main header {
+  display: flex;
+  align-items: center;
+  gap: 0px;
+  padding: 50px 40px;
   height: 70px;
   width: 100%;
-  background-color: #111111;
-  padding: 20px 30px;
 }
-main nav h4 {
-  font-size: 20px;
-  font-weight: 400;
-  display: inline;
-  margin-right: 15px;
+main header #nav1 {
+  height: 100%;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  gap: 0px;
+  gap: 30px;
 }
-main h1 {
-  font-size: 300px;
-  font-weight: 400;
-  padding: 0 30px;
+main header #nav1 p {
+  font-size: 25px;
+  font-weight: 600;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
-main #left-center {
-  padding: 40px;
+main header #nav1 a {
+  font-size: 15px;
+  text-decoration: none;
+  color: var(--black);
+  text-transform: capitalize;
+  font-weight: 600;
 }
-main #left-center h3 {
-  font-size: 20px;
-  margin: 20px 0;
+main header #nav1 a i {
+  opacity: 0.9;
 }
-main #left-center p {
+main header #nav2 {
+  background-color: aqua;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: flex-end;
+  height: 100%;
+  width: 50%;
+}
+main header #nav2 button:nth-child(1) {
+  outline: none;
+  border: none;
+  padding: 17px 25px;
+  border-radius: 30px;
+  background-color: white;
+  color: black;
+  font-size: 15px;
+  font-weight: 600;
+  padding: 12px 18px;
+}
+main header #nav2 button:nth-child(2) {
+  outline: none;
+  border: none;
+  padding: 17px 25px;
+  border-radius: 30px;
+  background-color: black;
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+}
+main figure {
+  height: 100%;
+  width: 100%;
+}
+main figure .top {
+  display: flex;
+  align-items: center;
+  gap: 0px;
+  height: 60%;
+  width: 100%;
+}
+main figure .top #top-left {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  flex-direction: column;
+  align-items: start;
+  padding: 80px 200px;
+  height: 100%;
+  width: 50%;
+}
+main figure .top #top-left h1 {
+  font-size: 48px;
+}
+main figure .top #top-left h1 span {
+  color: var(--pink);
+}
+main figure .top #top-left #texts p {
+  padding: 5px 0;
   font-size: 17px;
   font-weight: 400;
-  opacity: 0.8;
-  width: 80ch;
 }
-main footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
+main figure .top #top-left #texts p i {
+  color: var(--pink);
+  opacity: 0.7;
+}
+main figure .top #top-left button {
+  outline: none;
+  border: none;
+  padding: 17px 25px;
+  border-radius: 30px;
+  background-color: black;
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+}
+main figure .top #top-right {
   display: flex;
-  justify-content: space-between;
-  padding: 20px 30px;
+  align-items: center;
+  gap: 0px;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 40px 0;
+  height: 100%;
+  width: 50%;
 }
-main footer p:nth-child(2) {
-  text-decoration: underline;
+main figure .top #top-right #video-container {
+  position: relative;
+  overflow: hidden;
+  height: 500px;
+  width: 700px;
+  background-color: #d80505;
+  border-radius: 18px;
 }
-main img {
-  top: 50%;
-  left: 45%;
+main figure .top #top-right #video-container video {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main figure .top #top-right #video-container .logo {
   position: absolute;
-  height: 400px;
+  right: 2%;
+  top: 90%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 5px;
+  border-radius: 28px;
+  background-color: var(--white);
+  height: 40px;
+  width: 110px;
 }
-main #two {
-  left: 60%;
+main figure .top #top-right #video-container .logo img {
+  height: 30px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+  width: 30px;
 }
-main #three {
-  left: 75%;
+main figure .top #top-right #video-container .logo p {
+  font-size: 14px;
+  font-weight: 500;
+}
+main figure .bottom {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  flex-direction: column;
+  align-items: flex-start;
+  height: 20%;
+  width: 100%;
+  padding: 20px 200px;
+}
+main figure .bottom #suggestion {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+main figure .bottom #suggestion h4 {
+  font-weight: 400;
+  opacity: 0.8;
+  padding: 4px;
+  border-radius: 8px;
+  background-color: #FAF9FB;
+}
+main figure .bottom #searchbar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0px;
+  border-radius: 25px;
+  overflow: hidden;
+  width: 100%;
+  height: 60px;
+}
+main figure .bottom #searchbar input {
+  border-radius: 25px;
+  padding: 0 20px;
+  font-size: 14px;
+  background-color: rgba(216, 211, 211, 0.2666666667);
+  height: 100%;
+  width: 100%;
+  border: none;
+}
+main figure .bottom #searchbar #submit {
+  height: 40px;
+  right: 10px;
+  width: 40px;
+  display: inline-flex;
+  color: var(--white);
+  background-color: var(--pink);
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  position: absolute;
 }/*# sourceMappingURL=style.css.map */
